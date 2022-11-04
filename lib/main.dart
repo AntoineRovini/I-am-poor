@@ -1,19 +1,19 @@
+import 'package:test_flutter/screen/character_list.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-      MaterialApp(
-        home: Scaffold(
-          backgroundColor: Colors.purple.shade900,
-          appBar: AppBar(
-            centerTitle: true,
-            title: Text('I Am Poor'),
-            backgroundColor: Colors.indigo,
-          ),
-          body: Center(
-            child: Image(
-              image: AssetImage('images/running_wolf.png'),
-            ),
-          ),
-        ),
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Breaking Bad App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: CharacterList(key: UniqueKey()),
     );
+  }
+}
