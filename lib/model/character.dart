@@ -5,7 +5,7 @@ class Character {
   String nickname;
 
   Character.fromJson(Map json)
-      : id = json['id'],
+      : id = json['char_id'],
         name = json['name'],
         img = json['img'],
         nickname = json['nickname'];
